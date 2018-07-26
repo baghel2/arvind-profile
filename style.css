@@ -1,21 +1,16 @@
-html {
-  height: 100%;
-  background: black;
-}
+/* Fonts from Google Fonts - more at https://fonts.google.com */
 
 body {
-  height: inherit;
+  background-color: #3399FF;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
   margin: 0;
+  color: #444;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
-
-@media (orientation: landscape) {
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+  color:white;
 }

@@ -3,12 +3,12 @@ this.addEventListener('install', function(e) {
   e.waitUntil(caches.open(VERSION).then(cache => {
     return cache.addAll([
       '/',
-      'index.html',
-      'sw.js',
-      'style.css',
-     'Icon.png',
-     'fox-icon.png',
-     'icon-512.png'
+      '/index.html',
+      '/sw.js',
+      '/style.css',
+     '/Icon.png',
+     '/fox-icon.png',
+     '/icon-512.png'
     ]);
   }))
 });

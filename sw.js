@@ -1,8 +1,8 @@
 
-var VERSION = '2';
+var VERSION = '3';
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open(cacheName).then(function(cache) {
+    caches.open(VERSION).then(function(cache) {
       return cache.addAll(
         [
            '/',

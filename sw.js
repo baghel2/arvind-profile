@@ -20,6 +20,25 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', function(event) {
   event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+});
+
+/*
+Cache falling back to the network
+if ofline first
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+});
+/////////////
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
     caches.open(VERSION).then(function(cache) {
       return cache.match(event.request).then(function (response) {
         return response || fetch(event.request).then(function(response) {
@@ -31,7 +50,7 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
-/*
+////////////
 function fetch(url) {
   return fetch(url)
     .then(function(response) {

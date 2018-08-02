@@ -6,7 +6,7 @@ self.addEventListener('install', function(event) {
         [
            './',
       './index.html',
-      './sw.js',
+      './css/sw.js',
       './style.css',
      './Icon.png',
      './fox-icon.png',

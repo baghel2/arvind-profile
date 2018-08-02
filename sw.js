@@ -1,19 +1,24 @@
+
 var VERSION = '2';
-this.addEventListener('install', function(e) {
-  e.waitUntil(caches.open(VERSION).then(cache => {
-    return cache.addAll([
-      '/',
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      return cache.addAll(
+        [
+           '/',
       '/index.html',
       '/sw.js',
       '/style.css',
      '/Icon.png',
      '/fox-icon.png',
      '/icon-512.png'
-    ]);
-  }))
+        ]
+      );
+    })
+  );
 });
 
-
+/*
 self.addEventListener('fetch', function(e) {
   console.log(e.request.url);
   e.respondWith(
@@ -23,7 +28,7 @@ self.addEventListener('fetch', function(e) {
   );
 });
 
-/*
+
 function fetch(url) {
   return fetch(url)
     .then(function(response) {

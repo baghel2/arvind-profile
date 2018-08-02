@@ -1,4 +1,3 @@
-
 var VERSION = '3';
 self.addEventListener('install', function(event) {
   event.waitUntil(

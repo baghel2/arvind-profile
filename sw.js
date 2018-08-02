@@ -18,17 +18,20 @@ self.addEventListener('install', function(event) {
   );
 });
 
-/*
-self.addEventListener('fetch', function(e) {
-  console.log(e.request.url);
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.open(VERSION).then(function(cache) {
+      return cache.match(event.request).then(function (response) {
+        return response || fetch(event.request).then(function(response) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      });
     })
   );
 });
 
-
+/*
 function fetch(url) {
   return fetch(url)
     .then(function(response) {

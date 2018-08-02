@@ -4,13 +4,13 @@ self.addEventListener('install', function(event) {
     caches.open(VERSION).then(function(cache) {
       return cache.addAll(
         [
-           '/',
-      '/index.html',
-      '/sw.js',
-      '/style.css',
-     '/Icon.png',
-     '/fox-icon.png',
-     '/icon-512.png'
+           './',
+      './index.html',
+      './sw.js',
+      './style.css',
+     './Icon.png',
+     './fox-icon.png',
+     './icon-512.png'
         ]
       );
     })

@@ -6,17 +6,17 @@
   "display": "fullscreen",
   "icons": [
     {
-      "src": "Icon192.png",
+      "src": "./Images/Icon192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-    "src": "Icon144.png",
+    "src": "./Images/Icon144.png",
     "sizes": "144x144",
     "type": "image/png"
     },
     {
-    "src": "Icon512.png",
+    "src": "./Images/Icon512.png",
     "sizes": "512x512",
     "type": "image/png"
     }

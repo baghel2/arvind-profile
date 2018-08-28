@@ -1,4 +1,4 @@
-var VERSION = '3';
+var VERSION = '3.1';
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(VERSION).then(function(cache) {
@@ -8,9 +8,9 @@ self.addEventListener('install', function(event) {
       './index.html',
       './sw.js',
       './css/style.css',
-     './Icon.png',
-     './fox-icon.png',
-     './icon-512.png'
+     './Images/Icon144.png',
+     './Images/Icon192.png',
+     './Images/Icon512.png'
         ]
       );
     })

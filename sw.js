@@ -1,4 +1,4 @@
-var VERSION = '3.1';
+var VERSION = '3.2';
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(VERSION).then(function(cache) {
@@ -11,7 +11,7 @@ self.addEventListener('install', function(event) {
      './Images/Icon144.png',
      './Images/Icon192.png',
      './Images/Icon512.png',
-     './Images/MyImageNew.jpg'
+     './Images/MyImageNewWhite.jpg'
         ]
       );
     })

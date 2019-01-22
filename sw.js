@@ -10,7 +10,8 @@ self.addEventListener('install', function(event) {
       './css/style.css',
      './Images/Icon144.png',
      './Images/Icon192.png',
-     './Images/Icon512.png'
+     './Images/Icon512.png',
+     './Images/MyImageNew.jpg'
         ]
       );
     })

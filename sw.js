@@ -28,6 +28,25 @@ self.addEventListener('fetch', function(event) {
 });
 
 /*
+Once a new ServiceWorker has installed & a previous version isn't being used, the new one activates, and you get an activate event. 
+Because the old version is out of the way, it's a good time to handle schema migrations in IndexedDB and also delete unused caches.
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          // Return true if you want to remove this cache,
+          // but remember that caches are shared across
+          // the whole origin
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
+
 Cache falling back to the network
 if ofline first
 self.addEventListener('fetch', function(event) {

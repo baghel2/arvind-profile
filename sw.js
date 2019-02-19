@@ -6,11 +6,14 @@ self.addEventListener('install', function(event) {
         [
            './',
       './index.html',
+      './index.js',
+      './manifest.webmanifest',
       './sw.js',
       './css/style.css',
      './Images/Icon144.png',
      './Images/Icon192.png',
      './Images/Icon512.png',
+     './Images/icon-512.png',
      './Images/MyImageNewWhite.jpg'
         ]
       );

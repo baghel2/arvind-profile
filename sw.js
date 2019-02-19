@@ -13,7 +13,6 @@ self.addEventListener('install', function(event) {
      './Images/Icon144.png',
      './Images/Icon192.png',
      './Images/Icon512.png',
-     './Images/icon-512.png',
      './Images/MyImageNewWhite.jpg'
         ]
       );

@@ -1,3 +1,3 @@
-# ng-pwa-master
-pwa example
-https://baghel2.github.io/ng-pwa-master/
+# This is the static site for profile of Arvind Singh
+arvind-profile
+https://baghel2.github.io/arvind-profile
